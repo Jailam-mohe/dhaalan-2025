@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaalan 2025: National Skills & Career Expo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Modern Color System */
+            --primary-50: #eff6ff;
+            --primary-100: #dbeafe;
+            --primary-500: #3b82f6;
+            --primary-600: #2563eb;
+            --primary-700: #1d4ed8;
+            --primary-900: #1e3a8a;
+            
+            --secondary-500: #8b5cf6;
+            --secondary-600: #7c3aed;
+            
+            --accent-500: #06b6d4;
+            --accent-600: #0891b2;
+            
+            --success-500: #10b981;
+            --warning-500: #f59e0b;
+            --error-500: #ef4444;
+            
+            /* Neutral Scale */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --gray-950: #030712;
+            
+            /* Modern Gradients */
+            --gradient-brand: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-hero: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+            --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-warm: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            
+            /* Shadows - Modern Depth */
+            --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+            
+            /* Border Radius */
+            --radius-xs: 0.25rem;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-3xl: 2rem;
+            --radius-full: 50%;
+            
+            /* Spacing Scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+            
+            /* Typography Scale */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+            --text-7xl: 4.5rem;
+            --text-8xl: 6rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: white;
+            font-size: var(--text-base);
+            overflow-x: hidden;
+        }
+
+        /* Modern Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-hero);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+        }
+
+        /* Hero Section - Modernized */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-hero);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            33% { transform: translateY(-10px) rotate(0.5deg) scale(1.02); }
+            66% { transform: translateY(-5px) rotate(-0.5deg) scale(0.98); }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: white;
+            margin-bottom: var(--space-6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(var(--text-4xl), 8vw, var(--text-8xl));
+            font-weight: 800;
+            color: white;
+            margin-bottom: var(--space-4);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-6);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-12);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-xl);
+            font-weight: 500;
+            color: white;
+            font-size: var(--text-lg);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-6);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: var(--space-6);
+            border-radius: var(--radius-2xl);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            color: white;
+            margin-bottom: var(--space-1);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Modern Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--primary-600);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-1);
+            align-items: center;
+        }
+
+        .nav-link {
+            display: block;
+            padding: var(--space-2) var(--space-4);
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--primary-600);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: var(--text-xl);
+            cursor: pointer;
+            padding: var(--space-2);
+            border-radius: var(--radius-md);
+            transition: background 0.2s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--gray-100);
+        }
+
+        /* Section Base Styles */
+        .section {
+            padding: var(--space-24) 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--gray-50);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--primary-100);
+            color: var(--primary-700);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: var(--text-xl);
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Enhanced Card System */
+        .card-grid {
+            display: grid;
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); }
+        .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+        .card-grid-4 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        .card {
+            background: white;
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-hero);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-200);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-hero);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-4);
+        }
+
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-3);
+            line-height: 1.3;
+        }
+
+        .card-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+        }
+
+        .card-features {
+            list-style: none;
+        }
+
+        .card-features li {
+            padding: var(--space-2) 0;
+            color: var(--gray-600);
+            position: relative;
+            padding-left: var(--space-6);
+            line-height: 1.5;
+        }
+
+        .card-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-500);
+            font-weight: 600;
+        }
+
+        /* Platform Integration Highlight */
+        .platform-section {
+            background: var(--gradient-hero);
+            color: white;
+            border-radius: var(--radius-3xl);
+            padding: var(--space-20);
+            margin: var(--space-16) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        }
+
+        .platform-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        .platform-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .platform-icon {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-4);
+            display: block;
+        }
+
+        .platform-card h3 {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+            color: white;
+        }
+
+        .platform-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Modern Statistics Section */
+        .stats-section {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-20) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 20% 70%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        .stats-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--space-6);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--space-2);
+            background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-description {
+            font-size: var(--text-sm);
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Enhanced Sponsorship Packages */
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        .sponsor-package {
+            background: white;
+            border-radius: var(--radius-3xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .sponsor-package:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .package-header {
+            padding: var(--space-8);
+            color: white;
+            position: relative;
+            text-align: center;
+        }
+
+        .platinum { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+        .gold { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .silver { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
+        .bronze { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
+
+        .package-badge {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--gray-800);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .package-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .package-price {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            margin: var(--space-4) 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .package-features {
+            padding: var(--space-8);
+            background: linear-gradient(to bottom, white, var(--gray-50));
+        }
+
+        .package-features ul {
+            list-style: none;
+        }
+
+        .package-features li {
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--gray-200);
+            position: relative;
+            padding-left: var(--space-6);
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .package-features li:hover {
+            color: var(--primary-600);
+            transform: translateX(5px);
+        }
+
+        .package-features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            top: var(--space-3);
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-cta {
+            padding: var(--space-6);
+            background: var(--gray-50);
+        }
+
+        .package-btn {
+            background: var(--gradient-hero);
+            color: white;
+            border: none;
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            font-size: var(--text-base);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Timeline Enhancement */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: var(--space-16) auto 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: var(--gradient-hero);
+            border-radius: var(--radius-full);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: var(--space-12) 0;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: var(--space-8);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: var(--space-8);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-600);
+            border: 4px solid white;
+            border-radius: 50%;
+            top: var(--space-6);
+            box-shadow: 0 0 0 4px var(--primary-100);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -2.5rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -2.5rem;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary-600);
+            margin-bottom: var(--space-2);
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
+            font-size: var(--text-lg);
+        }
+
+        .timeline-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Contact Section Enhancement */
+        .contact-section {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-24) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+            animation: float 30s ease-in-out infinite;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-16);
+        }
+
+        .contact-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            color: white;
+        }
+
+        .contact-description {
+            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-12);
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .contact-card-icon {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-4);
+            display: block;
+        }
+
+        .contact-card h3 {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: white;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: var(--space-2);
+        }
+
+        .contact-highlight {
+            color: var(--accent-500);
+            font-weight: 600;
+            font-size: var(--text-lg);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--gradient-hero);
+            color: white;
+            padding: var(--space-4) var(--space-8);
+            border-radius: var(--radius-2xl);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--text-lg);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .card-grid-2 { grid-template-columns: 1fr; }
+            .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+            .sponsor-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: var(--space-4);
+                box-shadow: var(--shadow-lg);
+                border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-4);
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-4);
+            }
+
+            .timeline-line {
+                left: var(--space-6);
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: var(--space-12) !important;
+                padding-right: var(--space-4) !important;
+                text-align: left !important;
+            }
+
+            .timeline-content::before {
+                left: -2.25rem !important;
+            }
+
+            .card-grid {
+                gap: var(--space-4);
+            }
+
+            .section {
+                padding: var(--space-16) 0;
+            }
+
+            .section-header {
+                margin-bottom: var(--space-8);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .card {
+                padding: var(--space-6);
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus States */
+        .nav-link:focus,
+        .card:focus,
+        .sponsor-package:focus,
+        .package-btn:focus,
+        .cta-button:focus {
+            outline: 3px solid var(--accent-500);
+            outline-offset: 2px;
+        }
+
+        /* Animation Classes */
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Modern Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span>🚀</span>
+                Revolutionary Career Development
+            </div>
+            
+            <h1 class="hero-title">Dhaalan 2025</h1>
+            <p class="hero-subtitle">National Skills & Career Expo</p>
+            
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span>📅</span>
+                    November 6-8, 2025
+                </div>
+                <div class="meta-item">
+                    <span>📍</span>
+                    Hulhumale Central Park
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">15,000+</span>
+                    <span class="stat-label">Expected Attendees</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Job Opportunities</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Educational Placements</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Industry Partners</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Dhaalan 2025</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#objectives" class="nav-link">Objectives</a></li>
+                <li><a href="#digital-platform" class="nav-link">Digital Platform</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#sponsorship" class="nav-link">Sponsorship</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Event Overview</div>
+                <h2 class="section-title">Transforming Youth Development Through Digital Innovation</h2>
+                <p class="section-description">
+                    Building on Dhaalan 2024's success, we present a revolutionary vision that seamlessly integrates 
+                    cutting-edge digital platforms with comprehensive government services, creating the largest and most 
+                    technologically advanced career and skills expo in Maldivian history.
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Educational Excellence</h3>
+                    <p class="card-description">
+                        Revolutionize access to higher education through integrated HEMS Portal, offering instant 
+                        First Degree Scheme approvals, international scholarships, and student loan processing.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Employment Generation</h3>
+                    <p class="card-description">
+                        Transform job placement through National Careers Service Portal with live application 
+                        tracking, complemented by SAILS Project facilitated apprenticeship opportunities.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Skills Development</h3>
+                    <p class="card-description">
+                        Comprehensive skills enhancement through SAILS Project integration, certified training 
+                        programs, and Tuition Free Certificate courses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2024 Success Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-content">
+                <div class="section-header">
+                    <h2 class="section-title" style="color: white;">Building on 2024 Success</h2>
+                    <p class="section-description" style="color: rgba(255, 255, 255, 0.8);">
+                        Our proven track record demonstrates the impact of digital integration in youth development
+                    </p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value">10,000+</span>
+                        <span class="stat-description">Total Visitors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">681+</span>
+                        <span class="stat-description">Job Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">144+</span>
+                        <span class="stat-description">Course Registrations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">39</span>
+                        <span class="stat-description">Industry Partners</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Objectives -->
+    <section id="objectives" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Strategic Focus</div>
+                <h2 class="section-title">Our 2025 Objectives</h2>
+                <p class="section-description">
+                    Six key pillars driving unprecedented youth development through digital transformation
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-2">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Revolutionary Educational Access</h3>
+                    <p class="card-description">
+                        Transform higher education accessibility through integrated HEMS Portal services, enabling 
+                        immediate First Degree Scheme approvals and comprehensive student support.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Digital Employment Solutions</h3>
+                    <p class="card-description">
+                        Create comprehensive employment ecosystem through National Careers Portal with real-time 
+                        job matching and immediate placement opportunities.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Integrated Skills Development</h3>
+                    <p class="card-description">
+                        Provide holistic skills enhancement through SAILS Project integration and Industry 4.0 
+                        aligned certification programs.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Enhanced Entrepreneurship</h3>
+                    <p class="card-description">
+                        Foster startup culture through comprehensive support systems, pitch competitions, and 
+                        integrated funding opportunities.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3 class="card-title">Global Education Integration</h3>
+                    <p class="card-description">
+                        Connect youth with international opportunities through seamless HEMS Portal integration 
+                        with foreign universities.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3 class="card-title">Measurable Economic Impact</h3>
+                    <p class="card-description">
+                        Contribute to national economic growth by bridging skills gaps and creating measurable 
+                        pathways to career advancement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Platform Integration -->
+    <section id="digital-platform" class="section">
+        <div class="container">
+            <div class="platform-section">
+                <div class="platform-content">
+                    <div class="section-header">
+                        <h2 class="section-title" style="color: white;">Comprehensive Digital Platform Integration</h2>
+                        <p class="section-description" style="color: rgba(255, 255, 255, 0.9);">
+                            Experience the future of government service delivery through our seamlessly integrated 
+                            digital ecosystem, connecting education, employment, and skills development.
+                        </p>
+                    </div>
+                    
+                    <div class="platform-grid">
+                        <div class="platform-card">
+                            <span class="platform-icon">🖥️</span>
+                            <h3>HEMS Portal</h3>
+                            <p>Higher Education Management System enabling real-time processing of First Degree 
+                            approvals and international applications</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <span class="platform-icon">💼</span>
+                            <h3>National Careers Portal</h3>
+                            <p>Comprehensive employment platform with live job tracking and employer matching services</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <span class="platform-icon">📱</span>
+                            <h3>Mobile App Ecosystem</h3>
+                            <p>Integrated mobile applications providing seamless access with real-time notifications</p>
+                        </div>
+                        
+                        <div class="platform-card">
+                            <span class="platform-icon">🆔</span>
+                            <h3>NCIT Support Services</h3>
+                            <p>Comprehensive Efaas registration and technical support ensuring universal access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Zones & Experience Areas -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Event Layout</div>
+                <h2 class="section-title">Dedicated Experience Zones</h2>
+                <p class="section-description">
+                    Strategically designed zones offering immersive experiences across education, skills, 
+                    entertainment, and career development opportunities
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Education Provider Zone</h3>
+                    <p class="card-description">
+                        Dedicated space for universities, colleges, and training institutions to showcase 
+                        their programs, offer on-the-spot admissions, and process HEMS Portal applications.
+                    </p>
+                    <ul class="card-features">
+                        <li>Local and international university booths</li>
+                        <li>Live HEMS Portal processing stations</li>
+                        <li>Scholarship application desks</li>
+                        <li>Course counseling areas</li>
+                        <li>Student loan processing center</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🎭</div>
+                    <h3 class="card-title">Entertainment Zone</h3>
+                    <p class="card-description">
+                        Dynamic entertainment hub featuring live performances, cultural showcases, 
+                        and interactive activities to engage visitors throughout the event.
+                    </p>
+                    <ul class="card-features">
+                        <li>Main stage for live performances</li>
+                        <li>Cultural dance and music showcases</li>
+                        <li>Youth talent competitions</li>
+                        <li>Interactive games and activities</li>
+                        <li>Photography and social media corners</li>
+                        <li>Virtual reality experience stations</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🍽️</div>
+                    <h3 class="card-title">Food & Culinary Zone</h3>
+                    <p class="card-description">
+                        Comprehensive food court and culinary skills demonstration area showcasing 
+                        local cuisine and hospitality career opportunities.
+                    </p>
+                    <ul class="card-features">
+                        <li>Diverse food vendor stalls</li>
+                        <li>Live cooking demonstrations</li>
+                        <li>Culinary arts skill showcases</li>
+                        <li>Hospitality career presentations</li>
+                        <li>Traditional Maldivian cuisine displays</li>
+                        <li>Food service training opportunities</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Skills Experience Zone</h3>
+                    <p class="card-description">
+                        Hands-on experience center where visitors can try different trades and 
+                        technical skills under expert guidance.
+                    </p>
+                    <ul class="card-features">
+                        <li>Electrical installation training stations</li>
+                        <li>Pottery and ceramics workshops</li>
+                        <li>Carpentry and woodworking demos</li>
+                        <li>Plumbing and pipe fitting practice</li>
+                        <li>Automotive maintenance simulations</li>
+                        <li>Computer repair and IT skills</li>
+                        <li>Traditional handicraft demonstrations</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Career Hub Zone</h3>
+                    <p class="card-description">
+                        Central employment and career development area featuring employer booths, 
+                        interview spaces, and National Careers Portal access points.
+                    </p>
+                    <ul class="card-features">
+                        <li>Employer exhibition booths</li>
+                        <li>On-the-spot interview rooms</li>
+                        <li>CV writing and career counseling</li>
+                        <li>National Careers Portal stations</li>
+                        <li>Apprenticeship matching services</li>
+                        <li>Professional development workshops</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Innovation & Startup Zone</h3>
+                    <p class="card-description">
+                        Entrepreneurship and innovation showcase featuring startup pitches, 
+                        business development services, and technology demonstrations.
+                    </p>
+                    <ul class="card-features">
+                        <li>Startup pitch competition stage</li>
+                        <li>Business plan development workshops</li>
+                        <li>Investor networking areas</li>
+                        <li>Technology and innovation displays</li>
+                        <li>Mentorship matching services</li>
+                        <li>Funding opportunity presentations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Enhanced Services</div>
+                <h2 class="section-title">Revolutionary Service Offerings</h2>
+                <p class="section-description">
+                    Comprehensive integration of educational, employment, and skills development services 
+                    through our digital platform ecosystem
+                </p>
+            </div>
+
+            <!-- Educational Services -->
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 600; color: var(--primary-600); margin: var(--space-12) 0 var(--space-6);">🎓 Educational Services</h3>
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <h4 class="card-title">HEMS Portal Integration</h4>
+                    <p class="card-description">
+                        Comprehensive Higher Education Management System enabling on-the-spot processing of 
+                        First Degree Scheme approvals and international applications.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">Live Degree Approvals</h4>
+                    <p class="card-description">
+                        Eligible students receive immediate First Degree Scheme approval and secure university 
+                        admissions on-site.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">International University Hub</h4>
+                    <p class="card-description">
+                        Foreign universities offering exclusive scholarships and on-the-spot admissions through 
+                        HEMS Portal integration.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">Student Loan Center</h4>
+                    <p class="card-description">
+                        Complete loan utilization processing, agreement signing, and university placement 
+                        facilitation during the event.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">MQA Recognition Desk</h4>
+                    <p class="card-description">
+                        Instant course recognition services ensuring international qualifications are validated 
+                        immediately.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">SAILS Training Programs</h4>
+                    <p class="card-description">
+                        Access to Tuition Free Certificate 3 and 4 programs through local institutions for 
+                        practical skills development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Employment Solutions -->
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 600; color: var(--primary-600); margin: var(--space-12) 0 var(--space-6);">💼 Employment Solutions</h3>
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <h4 class="card-title">National Careers Portal</h4>
+                    <p class="card-description">
+                        Live tracking and management of job applications with real-time updates and comprehensive 
+                        employment statistics. Facilitates apprenticeship and internship opportunities through various employers.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">SAILS Apprenticeship Programs</h4>
+                    <p class="card-description">
+                        SAILS Project facilitated apprenticeship opportunities across various industries and skill levels,
+                        connecting students with employers for practical experience.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">Mobile App Integration</h4>
+                    <p class="card-description">
+                        Live mobile app functionality streamlining job applications, interview scheduling, 
+                        and offer management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Impact -->
+    <section id="impact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Expected Impact</div>
+                <h2 class="section-title">Measurable Outcomes & Targets</h2>
+                <p class="section-description">
+                    Ambitious yet achievable targets that will transform youth development in the Maldives
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <h4 class="card-title">📈 Quantitative Targets</h4>
+                    <ul class="card-features">
+                        <li>15,000+ total attendees (50% increase from 2024)</li>
+                        <li>1,000+ immediate job placements via National Careers Portal</li>
+                        <li>200+ First Degree Scheme approvals through HEMS Portal</li>
+                        <li>20+ international scholarship applications processed</li>
+                        <li>100+ SAILS Certificate training enrollments</li>
+                        <li>50+ apprenticeship/internship placements</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">🎯 Qualitative Goals</h4>
+                    <ul class="card-features">
+                        <li>Seamless integration of all Ministry digital services</li>
+                        <li>Enhanced accessibility to higher education</li>
+                        <li>Strengthened international education partnerships</li>
+                        <li>Improved qualification recognition processes</li>
+                        <li>Increased youth confidence and career clarity</li>
+                        <li>Enhanced skills-market alignment</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">🌍 Long-term Impact</h4>
+                    <ul class="card-features">
+                        <li>15% reduction in youth unemployment through targeted placements</li>
+                        <li>25% increase in higher education enrollment</li>
+                        <li>Enhanced skilled workforce participation</li>
+                        <li>Improved international education mobility</li>
+                        <li>Strengthened digital infrastructure for services</li>
+                        <li>Enhanced economic diversification through skills development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsorship Packages -->
+    <section id="sponsorship" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Partnership Opportunities</div>
+                <h2 class="section-title">Sponsorship Packages</h2>
+                <p class="section-description">
+                    Partner with us to showcase your brand to 15,000+ attendees and support the digital 
+                    transformation of youth development in the Maldives
+                </p>
+            </div>
+            
+            <div class="sponsor-grid">
+                <div class="sponsor-package">
+                    <div class="package-header platinum">
+                        <div class="package-badge">Most Popular</div>
+                        <h3 class="package-title">Platinum Partner</h3>
+                        <div class="package-price">MVR 500,000</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Title sponsorship of main stage</li>
+                            <li>Premium booth location (100m²)</li>
+                            <li>Logo on all marketing materials</li>
+                            <li>Speaking opportunities at key sessions</li>
+                            <li>VIP networking access</li>
+                            <li>Live TV interview slots</li>
+                            <li>Digital campaign inclusion</li>
+                            <li>Post-event analytics report</li>
+                            <li>Platform branding integration</li>
+                            <li>Priority talent pool access</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <button class="package-btn">Choose Platinum</button>
+                    </div>
+                </div>
+
+                <div class="sponsor-package">
+                    <div class="package-header gold">
+                        <div class="package-badge">Great Value</div>
+                        <h3 class="package-title">Gold Partner</h3>
+                        <div class="package-price">MVR 300,000</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Zone/pavilion sponsorship</li>
+                            <li>Large booth space (60m²)</li>
+                            <li>Logo on event materials</li>
+                            <li>Panel discussion participation</li>
+                            <li>Social media campaign mentions</li>
+                            <li>Workshop hosting opportunity</li>
+                            <li>Recruitment corner access</li>
+                            <li>Digital platform visibility</li>
+                            <li>Networking session hosting</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <button class="package-btn">Choose Gold</button>
+                    </div>
+                </div>
+
+                <div class="sponsor-package">
+                    <div class="package-header silver">
+                        <div class="package-badge">Recommended</div>
+                        <h3 class="package-title">Silver Partner</h3>
+                        <div class="package-price">MVR 150,000</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Activity/session sponsorship</li>
+                            <li>Standard booth space (40m²)</li>
+                            <li>Marketing material inclusion</li>
+                            <li>Social media features</li>
+                            <li>Networking access</li>
+                            <li>Lucky draw prize provision</li>
+                            <li>Digital platform mentions</li>
+                            <li>Workshop co-hosting opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <button class="package-btn">Choose Silver</button>
+                    </div>
+                </div>
+
+                <div class="sponsor-package">
+                    <div class="package-header bronze">
+                        <div class="package-badge">Starter</div>
+                        <h3 class="package-title">Supporting Partner</h3>
+                        <div class="package-price">MVR 75,000</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>Standard booth space (20m²)</li>
+                            <li>Basic marketing inclusion</li>
+                            <li>Digital platform mentions</li>
+                            <li>Networking opportunities</li>
+                            <li>Gift/prize contributions</li>
+                            <li>Social media recognition</li>
+                        </ul>
+                    </div>
+                    <div class="package-cta">
+                        <button class="package-btn">Choose Supporting</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Project Timeline</div>
+                <h2 class="section-title">Event Timeline & Milestones</h2>
+                <p class="section-description">
+                    Strategic roadmap from project initiation to post-event analysis, ensuring seamless 
+                    digital platform integration and successful execution
+                </p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 1, 2025</div>
+                        <h4 class="timeline-title">Project Launch & Digital Integration</h4>
+                        <p class="timeline-description">
+                            Form steering committee, finalize venue, launch official website, integrate HEMS Portal 
+                            and National Careers Service Portal, and establish NCIT support framework.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 15, 2025</div>
+                        <h4 class="timeline-title">Sponsorship & Partnership Drive</h4>
+                        <p class="timeline-description">
+                            Begin corporate outreach, international university negotiations, MNSDA collaboration 
+                            agreements, and MQA partnership establishment.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 1, 2025</div>
+                        <h4 class="timeline-title">Marketing Campaign & System Testing</h4>
+                        <p class="timeline-description">
+                            Roll out comprehensive marketing strategy, begin HEMS Portal stress testing, 
+                            National Careers Portal integration testing, and mobile app beta releases.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 1, 2025</div>
+                        <h4 class="timeline-title">Exhibitor & Educational Partner Finalization</h4>
+                        <p class="timeline-description">
+                            Complete exhibitor participation, finalize international university partnerships, 
+                            secure SAILS training provider agreements, and establish scholarship packages.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 1, 2025</div>
+                        <h4 class="timeline-title">Technology Integration & Staff Training</h4>
+                        <p class="timeline-description">
+                            Deploy mobile apps, complete HEMS and National Careers Portal integration, 
+                            train NCIT support staff, and conduct system-wide testing.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 1, 2025</div>
+                        <h4 class="timeline-title">Final Preparations & System Deployment</h4>
+                        <p class="timeline-description">
+                            Venue setup, final system deployment, staff comprehensive training, 
+                            pre-event registration campaigns, and logistics coordination.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 6-8, 2025</div>
+                        <h4 class="timeline-title">Event Execution & Live Monitoring</h4>
+                        <p class="timeline-description">
+                            Three-day expo with real-time HEMS Portal processing, live National Careers Portal 
+                            tracking, NCIT support services, and comprehensive success monitoring.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 15, 2025</div>
+                        <h4 class="timeline-title">Post-Event Analysis & Follow-up</h4>
+                        <p class="timeline-description">
+                            Comprehensive evaluation, digital platform performance analysis, stakeholder 
+                            feedback collection, and long-term impact assessment reporting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget & Investment -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Investment Overview</div>
+                <h2 class="section-title">Budget & Investment Strategy</h2>
+                <p class="section-description">
+                    Strategic investment in digital transformation delivering measurable ROI through 
+                    improved service delivery and youth development outcomes
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-2">
+                <div class="card">
+                    <h4 class="card-title">💰 Total Enhanced Budget</h4>
+                    <div style="font-size: var(--text-5xl); color: var(--primary-600); font-weight: 800; text-align: center; margin: var(--space-4) 0; font-family: 'Space Grotesk', sans-serif;">
+                        MVR 1,500,000
+                    </div>
+                    <p class="card-description">
+                        87% increase from 2024 to accommodate comprehensive digital integration, enhanced services, 
+                        and expanded scope with guaranteed ROI through improved service delivery.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">📊 Enhanced Funding Sources</h4>
+                    <ul class="card-features">
+                        <li>SAILS Project allocation</li>
+                        <li>Enhanced private sponsorships</li>
+                        <li>Ministry of Higher Education funds</li>
+                        <li>NCIT digital infrastructure support</li>
+                        <li>International partner contributions</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">💸 Major Expenditure Breakdown</h4>
+                    <ul class="card-features">
+                        <li>Digital platform integration and infrastructure</li>
+                        <li>Enhanced venue setup and logistics</li>
+                        <li>Comprehensive marketing and promotion</li>
+                        <li>Expanded staffing and technical operations</li>
+                        <li>International partnerships and travel</li>
+                        <li>Prizes, incentives, and participant support</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 class="card-title">📈 Expected ROI & Value</h4>
+                    <ul class="card-features">
+                        <li>Improved government service efficiency</li>
+                        <li>Reduced processing times for applications</li>
+                        <li>Enhanced job placement success rates</li>
+                        <li>Long-term platform usage beyond event</li>
+                        <li>Strengthened international partnerships</li>
+                        <li>Measurable youth unemployment reduction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability & Innovation -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Sustainability & Innovation</div>
+                <h2 class="section-title">Future-Forward Approach</h2>
+                <p class="section-description">
+                    Commitment to environmental sustainability, social responsibility, and digital inclusion 
+                    in all aspects of event planning and execution
+                </p>
+            </div>
+
+            <div class="card-grid card-grid-3">
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h4 class="card-title">Environmental Initiatives</h4>
+                    <ul class="card-features">
+                        <li>100% digital platform operations eliminating paper waste</li>
+                        <li>Solar-powered technology and charging stations</li>
+                        <li>Sustainable booth construction with reusable materials</li>
+                        <li>Carbon offset program for participant travel</li>
+                        <li>Comprehensive waste management systems</li>
+                        <li>Digital certificates and documentation only</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h4 class="card-title">Social Impact Programs</h4>
+                    <ul class="card-features">
+                        <li>Universal accessibility features for persons with disabilities</li>
+                        <li>Free skills training scholarships for underprivileged youth</li>
+                        <li>Island connectivity through live streaming</li>
+                        <li>Women in leadership and STEM spotlight programs</li>
+                        <li>Mental health and career counseling support</li>
+                        <li>Multi-language support and translation services</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h4 class="card-title">Digital Inclusion</h4>
+                    <ul class="card-features">
+                        <li>Free Wi-Fi and device access for all attendees</li>
+                        <li>Digital literacy training and support</li>
+                        <li>Platform navigation assistance for elderly users</li>
+                        <li>Multi-device compatibility ensuring universal access</li>
+                        <li>Offline capability for limited connectivity areas</li>
+                        <li>Community centers equipped for post-event access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-hero">
+                    <h2 class="contact-title">Ready to Transform Youth Development?</h2>
+                    <p class="contact-description">
+                        Join us in revolutionizing career and education services through the most comprehensive 
+                        digital integration in Maldivian government history. Let's create unprecedented 
+                        opportunities together.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <span class="contact-card-icon">📧</span>
+                        <h3>Email Us</h3>
+                        <p class="contact-highlight">dhaalan2025@mohe.gov.mv</p>
+                        <p>For all sponsorship, partnership, exhibitor, and general enquiries. 24-hour response during business days.</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-card-icon">📞</span>
+                        <h3>Call Us</h3>
+                        <p class="contact-highlight">1474</p>
+                        <p>Dedicated hotline for immediate assistance and information. Available Monday to Friday, 8:00 AM - 5:00 PM.</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-card-icon">🏢</span>
+                        <h3>Visit Our Office</h3>
+                        <p class="contact-highlight">Ministry of Higher Education, Labour and Skills Development</p>
+                        <p>Umar Zahir Office Building, 5th Floor<br>
+                        Lot:11602, Orchidmaa Higun<br>
+                        Hulhumale, Male' City<br>
+                        Republic of Maldives</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-card-icon">⏰</span>
+                        <h3>Office Hours</h3>
+                        <p class="contact-highlight">Monday - Thursday: 8:00 AM - 4:00 PM</p>
+                        <p class="contact-highlight">Sunday: 8:00 AM - 1:30 PM</p>
+                        <p>Closed Fridays and Saturdays. Special appointments available for urgent partnerships.</p>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="mailto:dhaalan2025@mohe.gov.mv" class="cta-button">
+                        <span>🚀</span>
+                        Contact Us Now
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7);">
+                    <p>&copy; 2025 Ministry of Higher Education, Labour and Skills Development</p>
+                    <p style="margin-top: var(--space-2);">Dhaalan 2025 - Powered by Ministry of Higher Education, Labour and Skills Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Enhanced scroll progress indicator
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                scrollProgress.style.transform = `scaleX(${Math.min(scrollPercent, 1)})`;
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            
+            navLinks.classList.toggle('active');
+            mobileBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const navLinks = document.getElementById('navLinks');
+                    const mobileBtn = document.getElementById('mobileMenuBtn');
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileBtn.textContent = '☰';
+                    }
+                }
+            });
+        });
+
+        // Enhanced navbar behavior
+        function updateNavbar() {
+            const navbar = document.getElementById('navbar');
+            const scrollY = window.scrollY;
+            
+            if (scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0,0,0,0.12)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+            }
+        }
+
+        // Active section tracking
+        function updateActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Counter animation function
+        function animateCounter(element, start, end, duration) {
+            const increment = (end - start) / (duration / 16);
+            let current = start;
+            const suffix = element.textContent.replace(/[\d,]/g, '');
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString() + suffix;
+            }, 16);
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu button
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Observe elements for animations
+            document.querySelectorAll('.card, .stat-card, .sponsor-package, .stat-item, .timeline-item, .contact-card, .platform-card').forEach(el => {
+                fadeObserver.observe(el);
+            });
+
+            // Add staggered animation delays
+            document.querySelectorAll('.card').forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Sponsor package interactions
+            document.querySelectorAll('.package-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const packageName = this.closest('.sponsor-package').querySelector('.package-title').textContent;
+                    window.location.href = `mailto:dhaalan2025@mohe.gov.mv?subject=Interest in ${packageName} Sponsorship Package&body=Hello, I am interested in learning more about the ${packageName} sponsorship package for Dhaalan 2025. Please provide additional details about digital platform integration opportunities and partnership benefits.`;
+                });
+            });
+
+            // Stats counter animation
+            const statValues = document.querySelectorAll('.stat-value, .stat-number');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = target.textContent.replace(/[^\d]/g, '');
+                        if (finalValue) {
+                            animateCounter(target, 0, parseInt(finalValue), 2000);
+                        }
+                        statsObserver.unobserve(target);
+                    }
+                });
+            });
+
+            statValues.forEach(item => {
+                statsObserver.observe(item);
+            });
+
+            // Timeline animations for mobile
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                    item.classList.add(index % 2 === 0 ? 'slide-in-left' : 'slide-in-right');
+                    item.style.animationDelay = `${index * 0.2}s`;
+                });
+            }
+
+            // Enhanced hover effects
+            document.querySelectorAll('.card, .contact-card, .platform-card').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            updateScrollProgress();
+            updateNavbar();
+            updateActiveSection();
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Enhanced error handling
+        window.addEventListener('error', function(e) {
+            console.error('Application error:', e.error);
+        });
+
+        // Reduced motion support
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (prefersReducedMotion.matches) {
+            document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        }
+
+        // Platform integration simulation
+        function simulatePlatformIntegration() {
+            console.log('HEMS Portal integration active');
+            console.log('National Careers Portal connected');
+            console.log('NCIT support services online');
+        }
+
+        // Initialize platform simulation
+        window.addEventListener('load', simulatePlatformIntegration);
+    </script>
+
+    <!-- SEO and Meta Tags -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Dhaalan 2025: National Skills & Career Expo",
+        "description": "The most comprehensive career and skills expo in Maldivian history, featuring revolutionary digital platform integration through HEMS Portal, National Careers Service Portal, and unprecedented opportunities for immediate educational and employment placements.",
+        "startDate": "2025-11-06",
+        "endDate": "2025-11-08",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Hulhumale Central Park",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hulhumale",
+                "addressRegion": "Male'",
+                "addressCountry": "MV"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Ministry of Higher Education, Labour and Skills Development",
+            "email": "dhaalan2025@mohe.gov.mv",
+            "telephone": "1474"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "MVR",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</body>
+</html>
